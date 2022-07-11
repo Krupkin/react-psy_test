@@ -1,0 +1,123 @@
+.app-title-info{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 4px;
+    padding: 10px 10px;
+    border: 1px dashed $second;
+    border-radius: 10px;
+    background-image: url('../../img/background_digital.jpg');
+    background-size: contain;
+    background-position: center;
+    
+
+    & .title{
+        margin: 4px auto;
+        color: $second;
+        font-size: 18px;
+        text-align: center;
+        font-family: 'Unica One', sans-serif;
+        @include for-midle-phone{
+            font-size: 20px;
+        }
+    }
+
+    & .title-rules{
+        display: block;
+        margin-bottom: 4px;
+        color: $white;
+        font-size: 13px;
+        text-align: justify;
+        text-indent: 8px;
+
+        &::before{
+            content: "!  ";
+            color: $second;
+            font-size: 16px;
+            font-weight: 800;
+        }
+    }
+}
+
+.app-title-info-form{
+    display: flex;
+    flex-direction: column;
+
+    & .info-form-input{
+        margin-bottom: 8px;
+        padding-left: 5px;
+        line-height: 24px;
+        background: none;
+        border: 1px solid $second;
+        color: $second;
+        border-radius: 4px;
+
+        &::placeholder{
+            color: $white;
+        }
+    }
+}
+
+
+
+.title-button{
+    align-self: center;
+    justify-self: flex-end;
+    position: relative;
+    background: none;
+    color: #ccc;
+    width: 120px;
+    height: 35px;
+    border: 0;
+    font-size: 18px;
+    border: 1px solid $second;
+    border-radius: 4px;
+    font-family: 'Raleway', sans-serif;
+    transition: .6s;
+    overflow: hidden;
+    &:focus{
+        outline: 0;
+        color: $black;
+    }
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        background: rgba(255,255,255,0.5);
+        width: 60px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        opacity: .5;
+        filter: blur(30px);
+        transform: translateX(-100px)  skewX(-15deg);
+    }
+    &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        background: rgba(255,255,255,0.2);
+        width: 30px;
+        height: 100%;
+        left: 30px;
+        top: 0;
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-100px) skewX(-15deg);
+    }
+    &:hover{
+        background:$second;
+        cursor: pointer;
+        &:before{
+            transform: translateX(300px)  skewX(-15deg);  
+            opacity: 0.6;
+            transition: .7s;
+        }
+        &:after{
+        transform: translateX(300px) skewX(-15deg);  
+        opacity: 1;
+        transition: .7s;
+        }
+    }
+}
+

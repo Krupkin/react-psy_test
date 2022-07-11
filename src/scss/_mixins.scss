@@ -1,0 +1,15 @@
+@mixin for-small-phone-only {
+    @media (max-width: 360px ) { @content; } 
+  }
+  @mixin for-midle-phone {
+    @media (min-width: 376px) { @content; }
+  }
+  @mixin for-big-phone {
+    @media (min-width: 480px) { @content; }
+  }
+  @mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+  }
+  @mixin for-big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+  }

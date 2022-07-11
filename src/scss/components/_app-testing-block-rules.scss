@@ -1,0 +1,99 @@
+.testing-block-rules{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: rgba($color: #000000c2, $alpha: .4);
+    z-index: 1;
+    transition: ease .4s all;
+    & span{
+        display: block;
+        margin: 20px 30px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid $second;
+        text-align: center;
+        color: $second;
+        background-color: rgba($color: #333, $alpha: .5);
+    }
+
+    & .rule-one{
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            top: -60%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            width: 90px;
+            height: 30px;
+            background-image: url('../../img/answer_img_quest.png');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: 4s linear 0s infinite alternate flash;
+        }
+    }
+
+    & .rule-two{
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 85%;
+            transform: translate(-50%, 50%);
+            width: 32px;
+            height: 72px;
+            background-image: url('../../img/answer_img_yes.png');
+            background-position: center;
+            background-size: cover;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 85%;
+            transform: translate(-50%, 50%);
+            width: 32px;
+            height: 72px;
+            background-image: url('../../img/answer_img_yes.png');
+            background-position: center;
+            background-size: cover;
+            animation: 4s linear 0s infinite alternate flash;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 15%;
+            transform: translate(-50%, 50%);
+            width: 32px;
+            height: 72px;
+            background-image: url('../../img/answer_img_no.png');
+            background-position: center;
+            background-size: cover;
+            animation: 4s linear 0s infinite alternate flash;
+        }
+    }
+    
+    .rule-btn{
+        position: absolute;
+        transform: translate(-50%, 50%);
+        margin: auto;
+        bottom: 10%;
+        left: 50%;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid $second;
+        text-align: center;
+        color: $second;
+        background-color: rgba($color: #333, $alpha: .5);
+    }
+}

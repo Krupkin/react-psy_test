@@ -1,0 +1,57 @@
+$color-bg: #252120;
+$color-shadow: #000;
+$color-white: #1a1a1a;
+
+
+
+.testing-block-btn {
+  border: 0;
+  outline: 0;
+  font-size: 1rem;
+  border-radius: 100px;
+  padding: 1rem;
+  height: 130px;
+  width: 100px;
+  background-color:$color-bg;
+  text-shadow: 1px 1px 0 $color-white;
+  color:#61677C;
+  font-weight: bold;
+  box-shadow: -5px -5px 20px $color-white,  5px 5px 20px $color-shadow;
+  transition: all 0.2s ease-in-out;
+  font-weight: 600;
+  transition: 0.5s ease;
+  // &:hover {
+  //   box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+  // }
+  
+  &:active {
+    box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+  }
+  #Capa_1 {
+  &:active {
+    // opacity: 30%;
+    transition: 0.2s ease;
+    }
+  }
+
+}
+
+.yes-btn{
+  fill: $subaform;
+  &:active .cls-1{
+    fill: $aform;
+    transition: 0.1s ease;
+  }
+  &.testing-block-btn{
+    transform: scale(-1, 1);
+  }
+}
+
+.no-btn{
+  fill: $subnegative;
+  &:active .cls-1{
+    fill: $negative;
+    transition: 0.1s ease;
+  }
+
+}

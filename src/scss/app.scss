@@ -1,0 +1,29 @@
+
+@import 'fonts';
+@import 'variables';
+@import 'animate';
+@import 'mixins';
+
+
+
+@import 'libs/normalize';
+
+@import 'components/app-title-info';
+@import 'components/app-progress-bar';
+@import 'components/app-testing-block';
+@import 'components/app-testing-block-rules';
+@import 'components/app-testing-block-button.scss';
+@import 'components/app-finish-block.scss';
+
+
+body{
+  height: 100vh;
+  background-image: url('../img/background_digitalcamo.jpg');
+  background-size: contain;
+  padding: 10px 10px;
+
+}
+
+.root{
+  height: 100%;
+}
